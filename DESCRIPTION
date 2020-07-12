@@ -1,0 +1,19 @@
+Package: miRminer
+Title: Scrapes disease-associated miRNA data
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "João Vitor",
+           family = "F. Cavalcante",
+           role = c("aut", "cre"),
+           email = "jvfe@ufrn.edu.br",
+           comment = c(ORCID = "0000-0001-7513-7376"))
+Description: Databases of miRNA-disease association, like HMDD or mirTarBase, provide 
+    easily downloadable data dumps, but no easy way to query it programmatically, such
+    as an API, this package exists to alleviate some of those issues.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests: 
+    testthat
