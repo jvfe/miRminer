@@ -1,4 +1,4 @@
 library(testthat)
-library(miRmineR)
+library(miRminer)
 
-test_check("miRmineR")
+test_check("miRminer")

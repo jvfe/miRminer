@@ -1,12 +1,11 @@
-#' Title
+#' HMDD content acquisition
 #'
-#' @param url
-#' @param obj_xpath
+#' Utility function to scrape HMDD pages and acquire relevant information,
+#' primarily the href attribute corresponding to the downloadable table,
+#' which is then read.
 #'
-#' @return
-#' @export
-#'
-#' @examples
+#' @param url A string corresponding to the url where to acquire the information.
+#' @param obj_xpath A string referring to the element xpath.
 get_hmdd_content <- function(url, obj_xpath) {
   tryCatch(
     {
@@ -24,14 +23,12 @@ get_hmdd_content <- function(url, obj_xpath) {
   )
 }
 
-#' Title
+#' Web request with sensible messages
 #'
-#' @param url
+#' @param url A string corresponding to the url.
 #'
-#' @return
-#' @export
-#'
-#' @examples
+#' @noRd
+#' @return List of the html content.
 make_request <- function(url) {
   tryCatch(
     {
@@ -45,16 +42,15 @@ make_request <- function(url) {
   )
 }
 
-#' Title
+#' Builds HMDD url
 #'
-#' @param info_type
-#' @param id
-#' @param extra_id
+#' @param info_type A string containing the type of information you want to
+#'   acquire from HMDD, network, e.g. browse_net, or causality.
+#' @param id A string referring to the entity ID, which can be either a microRNA or a disease name
+#' @param extra_id A string referring to the terminal id, which differs between types of information
 #'
-#' @return
-#' @export
-#'
-#' @examples
+#' @noRd
+#' @return A string corresponding to the url.
 make_hmdd_url <- function(info_type, id, extra_id) {
   sprintf("http://www.cuilab.cn/hmdd3app/%s/%s_%s/", info_type, id, extra_id)
 }
