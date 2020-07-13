@@ -25,3 +25,5 @@ Imports:
     dplyr,
     tools,
     memoise
+URL: https://github.com/jvfe/miRminer
+BugReports: https://github.com/jvfe/miRminer/issues

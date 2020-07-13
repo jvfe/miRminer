@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![R build
+status](https://github.com/jvfe/miRminer/workflows/R-CMD-check/badge.svg)](https://github.com/jvfe/miRminer/actions)
 <!-- badges: end -->
 
 Scrapes disease-associated miRNA data.
