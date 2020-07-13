@@ -1,3 +1,14 @@
+# Function documentation is in the memoised version
+
+.get_mirtar_disease <- function(disease) {
+  base <- "http://mirtarbase.cuhk.edu.cn/php/search.php?opt=disease_intermediate_mirna&disease_mirna="
+  url <- paste0(base, disease)
+  result <- make_request(url)
+  result %>%
+    rvest::html_table() %>%
+    "[["(1)
+}
+
 #' Retrieve miRNA-disease information from mirTarBase
 #'
 #' Queries mirTarBase for miRNAs associated with the specified disease, then outputs
@@ -12,11 +23,4 @@
 #' @examples
 #'
 #' get_mirtar_disease("carcinoma")
-get_mirtar_disease <- function(disease) {
-  base <- "http://mirtarbase.cuhk.edu.cn/php/search.php?opt=disease_intermediate_mirna&disease_mirna="
-  url <- paste0(base, disease)
-  result <- make_request(url)
-  result %>%
-    rvest::html_table() %>%
-    "[["(1)
-}
+get_mirtar_disease <- memoise::memoise(.get_mirtar_disease)

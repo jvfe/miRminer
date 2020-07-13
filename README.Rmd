@@ -13,26 +13,23 @@ knitr::opts_chunk$set(
 )
 ```
 
-# miRmineR
+# miRminer
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-This package exists to easily scrape miRNA-disease association data from databases such as [HMDD](http://www.cuilab.cn/hmdd) or [miRTarBase](http://mirtarbase.cuhk.edu.cn/php/)
+Scrapes disease-associated miRNA data.
+
+Databases of miRNA-disease association, like [HMDD](http://www.cuilab.cn/hmdd) or [miRTarBase](http://mirtarbase.cuhk.edu.cn/php/), provide 
+easily downloadable data dumps, but no easy way to query it programmatically, such
+as an API, this package exists to alleviate some of those issues.
 
 ## Installation
 
-You can install the latest version of miRmineR from Github with:
+You can install the latest version of miRminer from Github with:
 
 ``` r
-remotes::install_github("jvfe/miRmineR")
-```
+install.packages("remotes")
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-# library(miRmineR)
-## basic example code
+remotes::install_github("jvfe/miRminer")
 ```

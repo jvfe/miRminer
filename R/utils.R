@@ -33,7 +33,7 @@ make_request <- function(url) {
   tryCatch(
     {
       message("Processing the request...")
-      xml2::read_html(url)
+      xml2::read_html(url, options = "NOWARNING")
     },
     error = function(cond) {
       message(paste("The URL does not seem to exist:", url))

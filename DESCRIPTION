@@ -23,4 +23,5 @@ Imports:
     xml2,
     rvest,
     dplyr,
-    tools
+    tools,
+    memoise
