@@ -1,3 +1,5 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+mirtar_examp <- get_mirtar_disease("carcinoma")
+
+test_that("valid object", {
+  expect_s3_class(mirtar_examp, "tbl_df")
 })
