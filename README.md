@@ -24,3 +24,29 @@ install.packages("remotes")
 
 remotes::install_github("jvfe/miRminer")
 ```
+
+## Example usage
+
+If you want to get causality information from HMDD3:
+
+``` r
+library(miRminer)
+
+sepsis_causal <- get_hmdd_causality("sepsis")
+hm101_causal <- get_hmdd_causality("hsa-mir-101")
+```
+
+Or miRNA-target interaction networks:
+
+``` r
+
+silicosis_net <- get_hmdd_net("silicosis")
+hm101_net <- get_hmdd_net("hsa-mir-101")
+```
+
+Or maybe miRNA-disease association from mirTarBase:
+
+``` r
+
+carcinoma_mirnas <- get_mirtar_disease("carcinoma")
+```
