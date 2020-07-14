@@ -4,7 +4,7 @@
   if (startsWith(entity, "hsa")) {
     url <- make_hmdd_url("causality", entity, "a3")
   } else {
-    encoded_disease <- URLencode(tools::toTitleCase(entity))
+    encoded_disease <- utils::URLencode(tools::toTitleCase(entity))
     url <- make_hmdd_url("causality", encoded_disease, "a4")
   }
   result <- get_hmdd_content(url, '//*[@id="browsedownload"]')

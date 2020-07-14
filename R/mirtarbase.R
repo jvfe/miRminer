@@ -17,7 +17,7 @@
 #' @param disease A string corresponding to the disease you want to query.
 #'
 #'
-#' @return A tibble containing the miRNAs associated with the specified disease.
+#' @return A dataframe containing the miRNAs associated with the specified disease.
 #' @export
 #'
 #' @examples
