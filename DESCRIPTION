@@ -1,5 +1,5 @@
 Package: miRminer
-Title: Scrapes disease-associated miRNA data
+Title: Retrieving miRNA data from the web
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "João Vitor",
@@ -24,6 +24,7 @@ Imports:
     rvest,
     dplyr,
     tools,
-    memoise
+    memoise,
+    utils
 URL: https://github.com/jvfe/miRminer
 BugReports: https://github.com/jvfe/miRminer/issues

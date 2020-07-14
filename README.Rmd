@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R build status](https://github.com/jvfe/miRminer/workflows/R-CMD-check/badge.svg)](https://github.com/jvfe/miRminer/actions)
+[![license](https://img.shields.io/badge/license-MIT-lightgrey)](https://github.com/jvfe/miRminer/blob/master/LICENSE.md)
 <!-- badges: end -->
 
 Scrapes disease-associated miRNA data.

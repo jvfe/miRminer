@@ -3,5 +3,6 @@
 export("%>%")
 export(get_hmdd_causality)
 export(get_hmdd_net)
+export(get_mirdb_net)
 export(get_mirtar_disease)
 importFrom(magrittr,"%>%")
