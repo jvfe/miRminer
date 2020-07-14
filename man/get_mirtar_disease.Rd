@@ -10,7 +10,7 @@ get_mirtar_disease(disease)
 \item{disease}{A string corresponding to the disease you want to query.}
 }
 \value{
-A tibble containing the miRNAs associated with the specified disease.
+A dataframe containing the miRNAs associated with the specified disease.
 }
 \description{
 Queries mirTarBase for miRNAs associated with the specified disease, then outputs

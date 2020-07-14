@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • miRminer</title>
+<title>Retrieve miRNA-gene interaction from miRDB — get_mirdb_net • miRminer</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,10 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Retrieve miRNA-gene interaction from miRDB — get_mirdb_net" />
+<meta property="og:description" content="Queries miRDB for predicted miRNA-target interactions, returning a dataframe.
+Supports same species miRDB supports, such as Homo sapiens, Mus musculus and
+Rattus norvegicus. Each miRNA has to be preceeded by it's 3-letter species id." />
 
 
 
@@ -58,7 +61,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -105,66 +108,37 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Retrieve miRNA-gene interaction from miRDB</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jvfe/miRminer/blob/master/R/mirdb.R'><code>R/mirdb.R</code></a></small>
+    <div class="hidden name"><code>get_mirdb_net.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Queries miRDB for predicted miRNA-target interactions, returning a dataframe.
+Supports same species miRDB supports, such as Homo sapiens, Mus musculus and
+Rattus norvegicus. Each miRNA has to be preceeded by it's 3-letter species id.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>get_mirdb_net</span>(<span class='no'>mirna</span>)</pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="get_hmdd_causality.html">get_hmdd_causality()</a></code> </p>
-        </td>
-        <td><p>Retrieve causal miRNA-disease associations from HMDD3</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_hmdd_content.html">get_hmdd_content()</a></code> </p>
-        </td>
-        <td><p>HMDD content acquisition</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_hmdd_net.html">get_hmdd_net()</a></code> </p>
-        </td>
-        <td><p>Retrieve miRNA-target networks from HMDD3</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_mirdb_net.html">get_mirdb_net()</a></code> </p>
-        </td>
-        <td><p>Retrieve miRNA-gene interaction from miRDB</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_mirtar_disease.html">get_mirtar_disease()</a></code> </p>
-        </td>
-        <td><p>Retrieve miRNA-disease information from mirTarBase</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>mirna</th>
+      <td><p>A string corresponding to a microRNA ID, must be preceded by the 3-letter
+species code, e.g. 'hsa' or 'mmu'.</p></td>
+    </tr>
     </table>
-  </div>
 
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples">
+<span class='fu'>get_mirdb_net</span>(<span class='st'>"mmu-mir-100-3p"</span>)
+<span class='fu'>get_mirdb_net</span>(<span class='st'>"hsa-miR-101-2-5p"</span>)</pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
