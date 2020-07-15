@@ -1,0 +1,49 @@
+---
+title: "miRminer"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{miRminer}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(miRminer)
+library(tidygraph)
+library(stringr)
+library(ggraph)
+```
+
+
+Let's get the miRNA-target network for Coronary Artery disease and make it a tidy graph.
+Let's also extract the out centrality degree of each node, and specify when a node is a miRNA or a gene.
+
+```{r}
+cad_tab <- get_hmdd_net("Coronary Artery Disease")
+
+cad_graph <- as_tbl_graph(cad_tab, directed = TRUE) %>%
+  mutate(
+    out_centr = centrality_degree(mode = "out"),
+    type = ifelse(str_detect(pattern = "hsa", name), "miRNA", "Gene")
+  )
+```
+
+Now let's plot it, emphasizing the largest centralities!
+
+```{r}
+cad_graph %>%
+  ggraph(layout = "kk") +
+  geom_edge_fan(aes(linetype = regulation), alpha = 0.5) +
+  geom_node_point(aes(size = out_centr, color = type), 
+                  alpha = 0.5, show.legend = FALSE) +
+  geom_node_text(aes(label = ifelse((out_centr >= 4), name, NA)), 
+                 check_overlap = TRUE) +
+  theme_void()
+```

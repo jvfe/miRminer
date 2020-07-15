@@ -6,6 +6,8 @@
 #'
 #' @param url A string corresponding to the url where to acquire the information.
 #' @param obj_xpath A string referring to the element xpath.
+#'
+#' @noRd
 get_hmdd_content <- function(url, obj_xpath) {
   tryCatch(
     {

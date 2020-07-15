@@ -16,7 +16,12 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Suggests: 
-    testthat
+    testthat,
+    knitr,
+    rmarkdown,
+    stringr,
+    tidygraph,
+    ggraph
 Imports: 
     magrittr,
     readr,
@@ -28,3 +33,4 @@ Imports:
     utils
 URL: https://github.com/jvfe/miRminer
 BugReports: https://github.com/jvfe/miRminer/issues
+VignetteBuilder: knitr
